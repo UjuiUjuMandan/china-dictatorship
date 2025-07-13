@@ -2,15 +2,17 @@
 package main
 
 import (
+    _ "embed"
     "fmt"
     "log"
-    "os"
 )
 
+//go:embed README.adoc
+var data string
+
 func main() {
-    data, err := os.ReadFile("README.adoc")
-    if err != nil {
-        log.Fatal(err)
+    if data == "" {
+        log.Fatal("README.adoc content is empty")
     }
-    fmt.Print(string(data))
+    fmt.Print(data)
 }
