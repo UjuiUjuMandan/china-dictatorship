@@ -7,12 +7,12 @@ import (
     "log"
 )
 
-//go:embed README.adoc
+//go:embed README.md
 var data string
 
 func main() {
     if data == "" {
-        log.Fatal("README.adoc content is empty")
+        log.Fatal("README.md content is empty")
     }
     fmt.Print(data)
 }
