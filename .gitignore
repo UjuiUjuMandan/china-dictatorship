@@ -12,6 +12,9 @@
 /dist/
 __pycache__
 
+# Rust
+/target
+
 # Tests.
 *.tmp
 tmp.*
